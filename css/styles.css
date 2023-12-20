@@ -1,0 +1,155 @@
+html {
+    background-color: #000;
+    -webkit-user-select: none;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 15px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.menu-items {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333; /* Dark background color */
+  width: 200px;
+  height: 100%;
+}
+
+.menu-items ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.menu-items li {
+  margin-bottom: 10px;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+}
+
+.menu-items p {
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+}
+
+.menu-items.fs{
+  position: absolute;
+  top: 35%;
+  left: 45%;
+}
+
+.menu-circle,
+.menu-items,
+.menu{
+  position: fixed;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 100%;
+  right: 25px;
+  top: 25px;
+}
+
+.menu{
+  color: #fff;
+  z-index: 1;
+}
+
+.menu{
+  color: #ffffff;
+  padding-top: 10px;
+  -webkit-user-select: none;
+  cursor: pointer;
+  transition: .4s;
+  transform-origin: center;
+}
+
+.menu.fs {
+  transform: rotate(-180deg) translateY(5px);
+}
+
+.menu-circle{
+  background: #333;
+  pointer-events: none;
+  transition: .3s;
+  right: 50px;
+  top: 50px;
+  transform: translate3d(50%, -50%, 0);
+  transition-duration: 500ms;
+  transform-origin: center center;
+}
+
+.menu-circle.fs {
+  transform: translate3d(50%, -50%, 0);
+  transition-duration: 700ms;
+  width: 500vw;
+  height: 500vw;
+}
+
+.menu-items{
+  z-index: 0;
+}
+
+.menu-items.fs{
+  z-index: 2;
+}
+
+.stuff {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+  -webkit-user-select: none;
+  background-color: #000;
+  z-index: 2;
+}
+
+.stuff img {
+  max-width: 100%;
+  height: auto;
+  padding-right: 140px;
+  padding-top: 75px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+  }
+}
